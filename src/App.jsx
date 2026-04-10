@@ -218,7 +218,7 @@ export default function App() {
             className="text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 animate-fade-in"
             style={{ animationDelay: '0.1s' }}
           >
-            Wholesale &amp; Retail · Nigeria
+            Welcome To
           </p>
 
           <h1
@@ -298,7 +298,7 @@ export default function App() {
               Slide into our DM and let's have a deal. We specialize in wholesale and retail of both male and
               female fabrics, bringing you the finest selection from around the world.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-14">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
                 href={WHATSAPP}
                 target="_blank"
@@ -312,21 +312,6 @@ export default function App() {
                 <Globe className="w-5 h-5 text-gold" />
                 <span>We ship worldwide</span>
               </div>
-            </div>
-
-            {/* Stats bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-cream/10 rounded-2xl overflow-hidden border border-cream/10">
-              {[
-                { value: '500+',  label: 'Happy Clients' },
-                { value: '8',     label: 'Fabric Types' },
-                { value: '10+',   label: 'Years Trading' },
-                { value: '24hrs', label: 'Reply Time' },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-near-black px-6 py-6 text-center">
-                  <p className="font-display text-3xl sm:text-4xl font-bold text-gold mb-1">{stat.value}</p>
-                  <p className="text-cream/50 text-xs tracking-widest uppercase">{stat.label}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -428,30 +413,30 @@ export default function App() {
         className="relative py-20 sm:py-28 lg:py-32 bg-near-black"
       >
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Image */}
-              <div className="relative">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-luxury">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start sm:items-center">
+              {/* Image — compact portrait */}
+              <div className="relative flex-shrink-0 mx-auto sm:mx-0">
+                <div className="w-44 h-56 sm:w-52 sm:h-64 lg:w-64 lg:h-80 rounded-2xl overflow-hidden shadow-luxury">
                   <img
                     src="/images/ceo_new.jpg"
                     alt="Alhaja Folake Fauziat Olaniyan"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gold/20 rounded-full blur-3xl" />
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-gold/10 rounded-full blur-2xl" />
+                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-gold/20 rounded-full blur-2xl" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-gold/10 rounded-full blur-xl" />
               </div>
 
-              {/* Text */}
-              <div className="lg:pl-8">
-                <span className="text-gold text-sm font-semibold tracking-widest uppercase mb-4 block">Meet the CEO</span>
-                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-cream mb-4">
+              {/* Text — sits beside the image */}
+              <div className="flex-1 text-center sm:text-left">
+                <span className="text-gold text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 block">Meet the CEO</span>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-cream mb-2 leading-tight">
                   Alhaja Folake<br />
                   <span className="text-gold">Fauziat Olaniyan</span>
                 </h2>
-                <p className="text-cream/60 text-lg mb-6">CEO, Dfauzy Fabrics &amp; More</p>
-                <p className="text-cream/70 text-lg leading-relaxed mb-8">
+                <p className="text-cream/50 text-sm mb-4">CEO, Dfauzy Fabrics &amp; More</p>
+                <p className="text-cream/70 text-sm sm:text-base leading-relaxed mb-6">
                   I deal in wholesale and retail of both male and female fabrics.
                   With years of experience in the textile industry, I am committed
                   to bringing you the finest fabrics at the most competitive prices.
@@ -461,7 +446,7 @@ export default function App() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex bg-gold text-near-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-gold-light transition-all btn-press items-center gap-2"
+                  className="inline-flex bg-gold text-near-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gold-light transition-all btn-press items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
                   Connect on WhatsApp
@@ -608,7 +593,7 @@ export default function App() {
               </a>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+            <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-12 h-12 bg-cream/10 rounded-full flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-gold" />
@@ -636,29 +621,6 @@ export default function App() {
                 </a>
               </div>
             </div>
-
-            {/* Google Maps embed — Lameco, Osogbo */}
-            <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden border border-cream/10 shadow-luxury">
-              <iframe
-                title="D'fauzy Fabrics Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.9!2d4.5498!3d7.7719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1035a1a3b3b3b3b3%3A0x0!2sLameco%2C%20Osogbo%2C%20Osun%20State%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng&q=Lameco,Osogbo,Osun+State,Nigeria"
-                width="100%"
-                height="320"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.85)' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <a
-              href="https://maps.google.com/?q=Lameco,Osogbo,Osun+State,Nigeria"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 text-gold/70 hover:text-gold text-xs tracking-wider transition-colors"
-            >
-              <MapPin className="w-3.5 h-3.5" />
-              Open in Google Maps
-            </a>
           </div>
         </div>
       </section>
